@@ -3,13 +3,6 @@ import * as route53 from '@aws-cdk/aws-route53';
 import * as acm from '@aws-cdk/aws-certificatemanager';
 
 
-// Grabs the apex domain from regular domain
-// We need to find the
-function fetchApex(domain: string): string {
-  return (domain.match(/(?:.*\.)*(.+\..+)(?:\.)?$/)||[])[1];
-}
-
-
 export class BugStack extends cdk.Stack {
 
   public readonly certArn: cdk.CfnOutput;
